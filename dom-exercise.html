@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button onclick="
+        document.querySelector('.js-choice')
+        .innerHTML = 'You choose: heads';
+        ">heads</button>
+
+    <button onclick="
+    document.querySelector('.js-choice')
+    .innerHTML = 'You choose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
+    <input placeholder="Name" class="name-input" onkeydown="
+    if (event.key === 'Enter'){
+    handleInputKeydown();
+    }
+    ">
+<button onclick="
+handleInputKeydown();
+">Submit</button>
+
+<p class="message"></p>
+
+    <script>
+function  handleInputKeydown () {
+    const inputElement = document.querySelector('.name-input');
+      document.querySelector('.message')
+     .innerHTML = `Your name is: ${inputElement.value}`;
+        }
+     
+    </script>
+  </body>
+</html>
